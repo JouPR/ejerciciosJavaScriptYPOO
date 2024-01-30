@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+/* El objetivo del ejercicio es que el programador sea capaz de imprimir todos los números
+de la serie Fibonacci hasta tener el número de dígitos indicado en la variable
+numeroDeElementos*/
+
+let numeroDeElementos=prompt('Ingrese el número de dígitos que requiere en la serie');
+
+function Fibonacci(numeroDeElementos) {
+    let serieDeFibonacci = [];
+    
+    for (let i = 0; i < numeroDeElementos; i++) {
+        if (i <= 1) {
+            serieDeFibonacci.push(i);
+        } else {
+            serieDeFibonacci.push(serieDeFibonacci[i - 1] + serieDeFibonacci[i - 2]);
+        }
+    }
+
+    return serieDeFibonacci;
+}
+
+let sFibonacci = Fibonacci(numeroDeElementos);
+
+console.log(sFibonacci);
+
+    </script>
+</body>
+</html>
